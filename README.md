@@ -42,7 +42,6 @@ The implementation was carried out using Python and the following libraries:
 
 The vanilla neural network was used as a baseline for comparison:
 - **Architecture**: The network consisted of an input layer, two hidden layers, and an output layer with a sigmoid activation function.
-- **Optimizer**: RMSprop with a learning rate of 0.01.
 - **Loss Function**: Binary cross-entropy, suitable for binary classification.
 - **Performance**:
   - Test Loss: **0.1350**
@@ -104,6 +103,12 @@ The L2 regularized model outperformed the other models in terms of accuracy, rec
 - **Implementation**: Early stopping was applied with a patience value of **10 epochs** for all models (Vanilla, L1, and L2), where training was halted if there was no improvement in validation loss over this period.
 - **Relevance**: This technique allowed the models to maintain generalization to unseen data by avoiding excessive training beyond the optimal point. It ensured efficient training and prevented overfitting, leading to more robust model performance.
 
+#### Optimizers
+
+- **Testing and Selection**: Both **RMSprop** and **Adam** optimizers were tested for the different models. After evaluating their performance, the best combinations were selected for final implementation.
+  - **L1 Regularized Model**: Compiled using the **Adam** optimizer, known for its efficiency and performance in handling sparse gradients, making it suitable for this model's architecture.
+  - **L2 Regularized Model**: Also utilized the **RMSprop** optimizer to enhance training stability and performance.
+- **Relevance**: The choice of optimizers contributed to the models' ability to converge effectively during training. The RMSprop optimizer proved particularly beneficial for the L2 model, while the Adam optimizer provided robustness for the L1 regularized version.
 
 ### Key Observations and Performance Analysis
 
