@@ -12,7 +12,7 @@ The dataset used in this project is rich with streaming-related metrics that are
 - **TikTok Views**
 - **Shazam Counts**...
 
-A new binary target column, `High_Potential`, was created based on a threshold in the "Track Score" column to classify songs as either having high potential (1) or low potential (0).
+A binary target column, `High_Potential`, was based on a threshold in the "Track Score" column to classify songs as either having high potential (1) or low potential (0).
 
 ## Objectives
 
