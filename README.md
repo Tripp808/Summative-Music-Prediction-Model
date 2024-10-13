@@ -125,6 +125,18 @@ The L2 regularized model showed an approximately **3.44% improvement in accuracy
 To run the notebook and load the saved models:
 **Clone the repository** and navigate to the project directory:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-Install the required dependencies and then run the notebook
+   1. git clone <https://github.com/Tripp808/Summative-Music-Prediction-Model>
+   2. cd <Song_Popularity_Prediction_Model> 
+   3. Install the required dependencies using pip install
+   4. Then run the notebook jupyter notebook Oche_Ankeli_notebook.ipynb
+   5. Run the cells in sequence to preprocess the data, train the models, and evaluate performance.
+   6. Load the pre-trained models by using the load_model() function from Keras, specifying the path to the saved model files.
+```
+    
+## Conclusion
+The L2 regularization technique with the RMSprop optimizer proved to be the most effective solution, achieving the best balance across all performance metrics. Although L1 regularization showed high precision, it did not perform as well in terms of recall as the L2 model. The vanilla model lagged behind, indicating that regularization techniques were essential for improving generalization and minimizing overfitting.
+
+The findings highlight the potential of leveraging streaming metrics to predict the popularity of songs, providing valuable insights for artists and music industry stakeholders.
+
+Note: The performance metrics presented are from the initial execution of the notebook. Due to Colab runtime disconnections, re-running the cells led to slightly different results. However, the L2 regularized model consistently outperformed the others across multiple runs.
+
